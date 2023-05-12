@@ -36,6 +36,14 @@ class XmformController extends Controller
 
         return view('homepage')->with('symbols', $symbols);
     }
+
+    /**
+     * this function call as a form submit action where validate form data and based on form data send email and call another
+     * api for retrive historical data and show
+     *
+     * @param Request $request
+     * @return void
+     */
     public function submitForm(Request $request)
     {
         // Validation rules
@@ -109,11 +117,4 @@ class XmformController extends Controller
         return view('historical_data')->with('historical_data_list', $historical_data_list['prices'])->with('symbol_data', $emailData);
     }
 
-    public function symbol_historical_chart($symbolData)
-    {
-        // print_r($symbolData['symbol']);
-        //generate historical data by symbol
-
-
-    }
 }
