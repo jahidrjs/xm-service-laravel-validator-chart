@@ -1,6 +1,8 @@
 <?php
+namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hi', function () {
-    return view('Hi jahid');
-});
-
+Route::get('/', [XmformController::class, 'index']);
+Route::post('/submit-form', [XmformController::class, 'submitForm'])->name('submitForm');
+Route::post('/historical-chart', [XmformController::class, 'symbol_historical_chart'])->name('historicalChart');
