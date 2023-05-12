@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [XmformController::class, 'index']);
 Route::post('/submit-form', [XmformController::class, 'submitForm'])->name('submitForm');
-Route::post('/historical-chart', [XmformController::class, 'symbol_historical_chart'])->name('historicalChart');
+Route::post('/historical-data', [XmformController::class, 'symbol_historical_data'])->name('historicalChart');

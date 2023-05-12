@@ -11,8 +11,9 @@ class SymbolFormTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_home()
     {
+
         $this->assertTrue(true);
     }
 }
